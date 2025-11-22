@@ -1,0 +1,245 @@
+/* ============================= */
+/*        RESET & GLOBAL         */
+/* ============================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8f2;
+    color: #2a2a2a;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+header {
+    background: #ff7f4d;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* ============================= */
+/*              HERO             */
+/* ============================= */
+#hero {
+    padding: 80px 40px;
+    text-align: center;
+    background: linear-gradient(#ffe5d1, #fff1e8);
+}
+
+#hero button {
+    padding: 14px 26px;
+    background: #ff7f4d;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+#hero button:hover {
+    background: #ff5c1a;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*              CARDS            */
+/* ============================= */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #ccc;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ============================= */
+/*        AGENDAMENTO FORM       */
+/* ============================= */
+#agendamento {
+    padding: 40px;
+    text-align: center;
+}
+
+form {
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input,
+form select,
+form button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background: #ff7f4d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #ff5c1a;
+}
+
+/* ============================= */
+/*            SOBRE              */
+/* ============================= */
+#sobre {
+    padding: 40px;
+    text-align: center;
+    background: #fff1e8;
+    margin-top: 40px;
+}
+
+/* ============================= */
+/*           FOOTER              */
+/* ============================= */
+footer {
+    padding: 40px;
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+}
+
+.copy {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* ============================= */
+/*         RESPONSIVIDADE        */
+/* ============================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero {
+        padding: 60px 20px;
+    }
+}
+/* ============================= */
+/*           ANIMAÇÕES           */
+/* ============================= */
+
+/* Fade suave ao aparecer */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards subindo */
+.card {
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Hero com entrada suave */
+#hero {
+    animation: heroEnter 0.8s ease-out forwards;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover dos cards */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px #bbb;
+}
+

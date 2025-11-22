@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<h1>Painel Administrativo — PetShop</h1>
+
+<div class="stats">
+    <div class="box total">Total: {{ total }}</div>
+    <div class="box pendentes">Pendentes: {{ pendentes }}</div>
+    <div class="box concluidos">Concluídos: {{ concluidos }}</div>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th>Pet</th>
+        <th>Serviço</th>
+        <th>Dia</th>
+        <th>Telefone</th>
+        <th>Status</th>
+        <th>Ação</th>
+    </tr>
+
+    {% for a in agendamentos %}
+    <tr>
+        <td>{{ a[0] }}</td>
+        <td>{{ a[1] }}</td>
+        <td>{{ a[2] }}</td>
+        <td>{{ a[3] }}</td>
+        <td>{{ a[4] }}</td>
+        <td>{{ a[5] }}</td>
+        <td>{{ a[6] }}</td>
+        <td>
+            {% if a[6] == "pendente" %}
+                <a class="botao" href="/concluir/{{ a[0] }}">Concluir</a>
+            {% else %}
+                ✔
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

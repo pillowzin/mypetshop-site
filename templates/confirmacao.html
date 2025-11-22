@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento Confirmado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confirmacao.css') }}">
+</head>
+<body>
+
+    <div class="box">
+        <h1>Agendamento enviado!</h1>
+        <p>Obrigado, {{cliente}}.</p>
+
+        <div class="acoes">
+            <a href="/">Voltar ao início</a>
+            <a href="/#contato">Contato</a>
+            <a href="/#servicos">Ver serviços</a>
+        </div>
+    </div>
+
+</body>
+</html>

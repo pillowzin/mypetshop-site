@@ -1,0 +1,49 @@
+body {
+    font-family: Arial;
+    background: #fff8f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.box {
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.total { background: #555; }
+.pendentes { background: #ff7f4d; }
+.concluidos { background: #4caf50; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px #aaa;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.botao {
+    background: #4caf50;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}

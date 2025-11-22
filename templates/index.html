@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Fortaleza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🐾 PetShop Fortaleza</div>
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="fade-in">
+        <h2>Cuidado e Amor para o Seu Pet</h2>
+        <p>Banho, tosa, consultas e tudo que seu pet merece.</p>
+        <button onclick="window.location='#agendamento'">Agendar Agora</button>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="fade-in">
+        <h2>Serviços</h2>
+        <div class="cards">
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/banho.jpg') }}" class="card-img">
+                <h3>Banho & Tosa</h3>
+                <p>Higiene completa com produtos de alta qualidade.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/consulta.jpg') }}" class="card-img">
+                <h3>Consulta Veterinária</h3>
+                <p>Cuidado profissional com amor e dedicação.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/hotel.jpg') }}" class="card-img">
+                <h3>Hotelzinho Pet</h3>
+                <p>Conforto e segurança enquanto você descansa.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="fade-in">
+        <h2>Produtos</h2>
+        <div class="cards">
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/racao.jpg') }}" class="card-img">
+                <h3>Rações Premium</h3>
+                <p>Nutrição completa para cães e gatos.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/brinquedos.jpg') }}" class="card-img">
+                <h3>Brinquedos</h3>
+                <p>Diversão garantida para o seu pet.</p>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/coleiras.jpg') }}" class="card-img">
+                <h3>Coleiras e Acessórios</h3>
+                <p>Estilo e segurança em um só lugar.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section id="agendamento" class="fade-in">
+        <h2>Agendar Serviço</h2>
+
+        <form id="agenda-form" action="{{ url_for('agendar') }}" method="POST">
+            <input type="text" name="cliente" placeholder="Seu nome" required>
+            <input type="text" name="pet" placeholder="Nome do pet" required>
+            <input type="text" name="telefone" placeholder="Telefone para contato" required>
+
+
+            <select name="servico" required>
+                <option selected disabled>Selecione um serviço</option>
+                <option>Banho & Tosa</option>
+                <option>Consulta Veterinária</option>
+                <option>Hotelzinho</option>
+            </select>
+
+            <input type="date" name="dia" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="fade-in">
+        <h2>Sobre Nós</h2>
+        <p>
+            Fundado em Fortaleza, nosso petshop nasceu com a missão de oferecer
+            cuidado, carinho e profissionalismo para todos os animais.
+        </p>
+        <p>
+            Trabalhamos com amor porque acreditamos que seu pet merece o melhor.
+        </p>
+    </section>
+
+    <!-- CONTATO -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        <p>WhatsApp: (85) 99999-9999</p>
+        <p>Endereço: Fortaleza - CE</p>
+        <p class="copy">© 2025 PetShop Fortaleza</p>
+        <p class="copy">Site por Jacob Derek</p>
+    </footer>
+
+</body>
+</html>

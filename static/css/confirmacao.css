@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background: #fff1e8;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ccc;
+    text-align: center;
+}
+
+.acoes a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: #ff7f4d;
+    padding: 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.acoes a:hover {
+    background: #ff5c1a;
+}
